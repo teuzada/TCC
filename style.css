@@ -19,17 +19,23 @@ html {
 
 /* ==== CABEÇALHO ==== */
 header {
-    background: #0a3d91;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(90deg, rgb(0, 51, 102), rgb(0, 128, 255));
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
-    flex-wrap: wrap;
-    position: sticky;
-    top: 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: background 0.3s ease, padding 0.3s ease;
+}
+
+header.scrolled {
+    background: linear-gradient(90deg, rgb(0, 40, 80), rgb(0, 100, 200));
+    padding: 10px 30px;
 }
 
 .logo-area {
@@ -39,13 +45,19 @@ header {
 }
 
 .logo {
-    width: 60px;
-    height: auto;
+    height: 55px;
+    border-radius: 50%;
 }
 
 .logo-area h1 {
     font-size: 1.4rem;
     font-weight: 600;
+}
+
+header h1 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
 .navbar {
@@ -458,4 +470,66 @@ footer {
         height: 300px;
     }
 }
+
+/* Menu responsivo (mobile) */
+#menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+#menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 4px;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.nav-menu {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: linear-gradient(180deg, rgb(0, 51, 102), rgb(0, 128, 255));
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        display: none;
+        padding: 20px 0;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    #menu-toggle {
+        display: flex;
+    }
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+    color: rgb(255, 255, 255);
+    transform: scale(1.05);
+}
+
 
