@@ -23,7 +23,7 @@ header {
 
 .logo-area {
     display: flex;
-    align-items: center;
+    align-items: left;
     justify-content: center;
     flex-direction: column;
 }
