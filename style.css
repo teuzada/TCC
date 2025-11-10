@@ -257,29 +257,54 @@ header {
 
 /* ==== RODAPÉ ==== */
 footer {
-    background: #0a3d91;
+    background: #002b5c;
     color: white;
     text-align: center;
-    padding: 25px 10px;
-    margin-top: 50px;
+    padding: 30px 10px;
+    margin-top: 60px;
 }
 
-footer ul {
-    list-style: none;
+.footer-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.footer-content p {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.social-links {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-footer a {
-    color: white;
-    text-decoration: none;
-    transition: 0.3s;
+.social-links img {
+    width: 28px;
+    height: 28px;
+    filter: invert(1);
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-footer a:hover {
-    color: #a7c7ff;
+.social-links a:hover img {
+    transform: scale(1.1);
+    filter: invert(69%) sepia(64%) saturate(320%) hue-rotate(176deg) brightness(95%) contrast(93%);
+}
+
+.footer-copy {
+    font-size: 0.8rem;
+    color: #ddd;
+    margin-top: 5px;
+}
+
+@media (max-width: 600px) {
+    .social-links img {
+        width: 24px;
+        height: 24px;
+    }
 }
 
 /* ==== RESPONSIVIDADE ==== */
