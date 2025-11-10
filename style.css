@@ -10,6 +10,11 @@ body {
     color: #222;
     background-color: #f7f9fc;
     scroll-behavior: smooth;
+    
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 /* ==== CABEÇALHO ==== */
@@ -43,6 +48,41 @@ header {
     font-weight: 600;
 }
 
+.navbar {
+    position: sticky;
+    top: 0;
+    background: linear-gradient(90deg, #003d82, #0059b3);
+    color: white;
+    padding: 10px 20px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-area img {
+    width: 60px;
+    height: auto;
+}
+
+.logo-area h1 {
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
 /* ==== MENU ==== */
 .nav-list {
     display: flex;
@@ -61,6 +101,25 @@ header {
     color: #a7c7ff;
 }
 
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #a8d1ff;
+    border-bottom: 2px solid #a8d1ff;
+}
+
 /* ==== BOTÃO MENU MOBILE ==== */
 .menu-toggle {
     display: none;
@@ -69,6 +128,50 @@ header {
     color: white;
     border: none;
     cursor: pointer;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle span {
+    background: white;
+    height: 3px;
+    width: 25px;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* ====== RESPONSIVIDADE ====== */
+@media (max-width: 850px) {
+    .nav-menu {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #004792;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .logo-area h1 {
+        font-size: 1rem;
+    }
 }
 
 /* ==== SEÇÕES ==== */

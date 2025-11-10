@@ -12,3 +12,15 @@ function initMap() {
 }
 
 window.onload = initMap;
+
+// Menu responsivo
+document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("nav-menu");
+
+    toggle.addEventListener("click", () => {
+        menu.classList.toggle("active");
+        toggle.classList.toggle("open");
+    });
+});
+
