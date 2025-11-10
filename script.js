@@ -1,15 +1,14 @@
-// Função para carregar o mapa
 function initMap() {
-    const location = { lat: -23.550520, lng: -46.633308 }; // Coordenadas de São Paulo (ajuste conforme necessário)
+    const location = { lat: -25.440936, lng: -49.233451 }; // Coordenadas da escola
     const map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 14,
-        center: location
+        zoom: 16,
+        center: location,
     });
-    const marker = new google.maps.Marker({
+    new google.maps.Marker({
         position: location,
-        map: map
+        map: map,
+        title: "Colégio Estadual Julio Mesquita",
     });
 }
 
-// Carregar o mapa quando a página for carregada
 window.onload = initMap;
