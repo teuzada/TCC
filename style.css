@@ -1,4 +1,4 @@
-/* ==== RESET GERAL ==== */
+
 * {
     margin: 0;
     padding: 0;
@@ -17,7 +17,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* ==== CABEÇALHO ==== */
 header {
     position: fixed;
     top: 0;
@@ -95,7 +94,6 @@ header h1 {
     font-weight: 600;
 }
 
-/* ==== MENU ==== */
 .nav-list {
     display: flex;
     gap: 20px;
@@ -132,7 +130,7 @@ header h1 {
     border-bottom: 2px solid #a8d1ff;
 }
 
-/* ==== BOTÃO MENU MOBILE ==== */
+
 .menu-toggle {
     display: none;
     font-size: 1.8rem;
@@ -157,7 +155,7 @@ header h1 {
     transition: 0.3s;
 }
 
-/* ====== RESPONSIVIDADE ====== */
+
 @media (max-width: 850px) {
     .nav-menu {
         position: absolute;
@@ -186,13 +184,13 @@ header h1 {
     }
 }
 
-/* ==== SEÇÕES ==== */
+
 .section, .intro {
     padding: 80px 10%;
     text-align: center;
 }
 
-/* ==== INTRO ==== */
+
 .intro {
     background: linear-gradient(rgba(10, 61, 145, 0.8), rgba(10, 61, 145, 0.8)), url('fachada.png') center/cover no-repeat;
     color: white;
@@ -230,7 +228,7 @@ header h1 {
     background: #a7c7ff;
 }
 
-/* ==== HISTÓRIA ==== */
+
 #historia {
     background: white;
     border-radius: 12px;
@@ -258,7 +256,7 @@ header h1 {
     font-weight: bold;
 }
 
-/* ==== LOCALIZAÇÃO ==== */
+
 #localizacao {
     text-align: center;
 }
@@ -317,7 +315,7 @@ header h1 {
     }
 }
 
-/* ==== PROFESSORES ==== */
+
 #professores {
     padding: 60px 20px;
     text-align: center;
@@ -359,19 +357,19 @@ header h1 {
     margin-bottom: 15px;
 }
 
-/* Nome */
+
 .professor-card h3 {
     font-size: 1.1rem;
     margin-bottom: 4px;
     color: #003F88; /* azul da escola */
 }
 
-/* Matéria */
+
 .professor-card p {
     font-size: 0.95rem;
     color: #444;
 }
-/* ==== GALERIA ==== */
+
 .galeria-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -392,7 +390,6 @@ header h1 {
     transform: scale(1.03);
 }
 
-/* ==== RODAPÉ ==== */
 footer {
     background: #002b5c;
     color: white;
@@ -444,7 +441,6 @@ footer {
     }
 }
 
-/* ==== RESPONSIVIDADE ==== */
 @media (max-width: 768px) {
     .nav-list {
         display: none;
@@ -493,7 +489,6 @@ footer {
     }
 }
 
-/* Menu responsivo (mobile) */
 #menu-toggle {
     display: none;
     flex-direction: column;
@@ -560,7 +555,6 @@ nav a:hover {
   background: transparent;
 }
 
-/* título */
 #professores h2 {
   font-size: 2rem;
   margin-bottom: 30px;
@@ -578,7 +572,6 @@ nav a:hover {
   padding: 0 10px;
 }
 
-/* cards */
 .professor-card {
   background: #ffffff;
   border-radius: 12px;
@@ -590,7 +583,6 @@ nav a:hover {
   align-items: center;
 }
 
-/* imagem com tamanho fixo e crop */
 .professor-card img {
   width: 100%;
   height: 220px;
@@ -599,7 +591,6 @@ nav a:hover {
   display: block;
 }
 
-/* texto do card */
 .professor-card h3 {
   margin-top: 12px;
   font-size: 1.05rem;
@@ -610,13 +601,11 @@ nav a:hover {
   color: #555;
 }
 
-/* hover */
 .professor-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 30px rgba(0,0,0,0.12);
 }
 
-/* responsivo: 1 coluna em telas pequenas, 2 médias, 3+ em desktop */
 @media (max-width: 900px) {
   .professor-list {
     grid-template-columns: repeat(2, 1fr) !important;
