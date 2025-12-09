@@ -551,4 +551,80 @@ nav a:hover {
     transform: scale(1.05);
 }
 
+/* ======== Professores: layout definitivo ======== */
+#professores {
+  padding: 60px 20px;
+  text-align: center;
+  background: transparent;
+}
+
+/* título */
+#professores h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #0a3d91;
+}
+
+/* força grid (fallback para flex se grid for bloqueado) */
+.professor-list {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
+  gap: 24px !important;
+  align-items: start !important;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* cards */
+.professor-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  padding: 14px;
+  transition: transform .22s ease, box-shadow .22s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* imagem com tamanho fixo e crop */
+.professor-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+/* texto do card */
+.professor-card h3 {
+  margin-top: 12px;
+  font-size: 1.05rem;
+  color: #003366;
+}
+.professor-card p {
+  margin-top: 6px;
+  color: #555;
+}
+
+/* hover */
+.professor-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* responsivo: 1 coluna em telas pequenas, 2 médias, 3+ em desktop */
+@media (max-width: 900px) {
+  .professor-list {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (max-width: 560px) {
+  .professor-list {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 
