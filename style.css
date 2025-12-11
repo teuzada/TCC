@@ -618,13 +618,12 @@ nav a:hover {
 .feedbacks-section {
     padding: 60px 20px;
     text-align: center;
-    background: #f6f6f6;
 }
 
 .feedbacks-section h2 {
     font-size: 2rem;
-    margin-bottom: 20px;
     color: #0a3d91;
+    margin-bottom: 25px;
 }
 
 .feedbacks-container {
@@ -641,29 +640,10 @@ nav a:hover {
     padding: 15px;
     border-radius: 15px;
     box-shadow: 0 3px 12px rgba(0,0,0,0.15);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.feedback-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-.video-wrapper video {
+.video-wrapper iframe {
     width: 100%;
-    border-radius: 12px;
-    outline: none;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .feedback-card {
-        width: 90%;
-    }
-}
-
-@media (max-width: 480px) {
-    .feedbacks-container {
-        gap: 20px;
-    }
+    height: 180px;
+    border-radius: 10px;
 }
