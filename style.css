@@ -609,11 +609,12 @@ nav a:hover {
   .professor-list {
     grid-template-columns: repeat(2, 1fr) !important;
   }
-}
+    
 @media (max-width: 560px) {
   .professor-list {
     grid-template-columns: 1fr !important;
   }
+}
 
 .feedbacks-section {
     padding: 60px 20px;
