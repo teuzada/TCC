@@ -616,6 +616,8 @@ nav a:hover {
     grid-template-columns: 1fr !important;
   }
 
+/* ==== FEEDBACKS ==== */
+
 .feedbacks-section {
     padding: 60px 20px;
     background: #f5f9ff;
@@ -626,7 +628,7 @@ nav a:hover {
     font-size: 2.2rem;
     font-weight: 700;
     margin-bottom: 30px;
-    color: #004aad;
+    color: #004aad; /* Azul bonito */
 }
 
 .feedbacks-container {
@@ -650,7 +652,8 @@ nav a:hover {
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
-.video-wrapper video {
+.video-wrapper video,
+.video-wrapper iframe {
     width: 100%;
     border-radius: 12px;
     outline: none;
@@ -661,6 +664,5 @@ nav a:hover {
     font-weight: 600;
     color: #333;
 }
-
 
 
